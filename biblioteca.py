@@ -9,7 +9,7 @@ class Pessoa:
     def comer(self):
         if self.comendo:
             print(f"{self.nome} já está comendo.")
-            return  
+            return
         self.comendo = True
         print(f"{self.nome} está comendo {self.alimento}.")
 
@@ -66,7 +66,143 @@ class Conta:
     def verificarsaldo(self):
             print(f"Saldo atual da conta {self.numeroconta}: R${self.saldo:.2f}")
             return self.saldo
-"""import datetime
+
+class Animal:
+    def __init__(self, nome, cor):
+        self.nome = nome
+        self.cor = cor
+    def comer(self ):
+        print (f"o {self.nome} foi comer...")
+
+class Gato(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome,cor)
+
+    def miar(self):
+        print (f"O {self.nome} esta miando...")
+
+class Cachorro(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome,cor)
+
+    def latir(self):
+        print (f"O {self.nome} esta latindo...")
+
+class Vaca(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome,cor)
+
+    def mugir(self):
+        print (f"O {self.nome} esta mugindo...")
+
+class Coelho(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome,cor)
+
+    def guinchar(self):
+        print (f"O {self.nome} esta guinchando...")
+
+class Ingresso:
+    def __init__(self,valor):
+        self.valor = valor
+    def valor(self):
+        print (f"O ingresso é R${self.valor} reais")
+
+class Vip(Ingresso):
+    def __init__(self,valor):
+        super().__init__(valor)
+        self.valor *=1.5
+    def valor(self):
+        print (f"O ingresso vip é R$ {self.valor} reais.")
+
+class Forma:
+    def __init__(self, area, perimetro):
+        self.area = area
+        self.perimetro = perimetro
+
+class Retangulo(Forma):
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura
+        area = self.calcular_area()
+        perimetro = self.calcular_perimetro()
+        super().__init__(area, perimetro)
+
+    def calcular_area(self):
+        return self.base * self.altura
+
+    def calcular_perimetro(self):
+        return 2 * (self.base + self.altura)
+
+    def exibir_dados(self):
+        print(f"A área do retângulo é: {self.area}")
+        print(f"O perímetro do retângulo é: {self.perimetro}")
+
+
+class Atleta:
+    def __init__(self, aposentado, peso):
+        self.aposentado = aposentado
+        self.peso = peso
+        self.aquecido = False
+
+    def aquecer(self):
+        if not self.aposentado:
+            self.aquecido = True
+            print("Atleta está aquecido.")
+        else:
+            print("Atleta aposentado não pode aquecer.")
+
+    def aposentar(self):
+        self.aposentado = True
+        print("Atleta foi aposentado.")
+
+class Corredor(Atleta):
+    def __init__(self, aposentado, peso):
+        super().__init__(aposentado, peso)
+
+    def aquecer(self):
+        if not self.aposentado:
+            self.aquecido = True
+            print("Corredor está aquecido.")
+        else:
+            print("Corredor aposentado não pode aquecer.")
+
+    def aposentar(self):
+        self.aposentado = True
+        print("Corredor foi aposentado.")
+
+class Nadador (Atleta):
+    def __init__(self, aposentado, peso):
+        super().__init__(aposentado, peso)
+
+    def aquecer(self):
+        if not self.aposentado:
+            self.aquecido = True
+            print("Nadador está aquecido.")
+        else:
+            print("Nadador aposentado não pode aquecer.")
+
+    def aposentar(self):
+        self.aposentado = True
+        print("Nadador foi aposentado.")
+
+class Ciclista(Atleta):
+    def __init__(self, aposentado, peso):
+        super().__init__(aposentado, peso)
+
+    def aquecer(self):
+        if not self.aposentado:
+            self.aquecido = True
+            print("O ciclista está aquecido.")
+        else:
+            print("Ciclista aposentado não pode aquecer.")
+
+    def aposentar(self):
+        self.aposentado = True
+        print("Ciclista foi aposentado.")
+"""falta o triatleta
+"""
+    """import datetime
 
 agora = datetime.datetime.now()
 
