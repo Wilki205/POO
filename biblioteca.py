@@ -200,31 +200,21 @@ class Ciclista(Atleta):
     def aposentar(self):
         self.aposentado = True
         print("Ciclista foi aposentado.")
-"""falta o triatleta
-"""
-    """import datetime
+        
+class Triatleta(Corredor,Nadador,Ciclista):
+    def __init__(self, aposentado, peso):
+        super().__init__(aposentado, peso)
+        self.aposentado = True
+        self.aquecido = False
 
-agora = datetime.datetime.now()
+    def aquecer(self):
+        if not self.aposentado:
+            self.aquecido = False
+            print("O triatleta está aquecido.")
 
-print("Data e hora atual:", agora)
-print("Ano:", agora.year)
-print("Mês:", agora.month)
-print("Dia:", agora.day)
-print("Hora:", agora.hour)
-print("Minuto:", agora.minute)
-print("Segundo:", agora.second)
-print("Dia da semana:", agora.strftime("%A"))"""
+        else:
+            print("O triatleta aposentado não pode aquecer.")
 
-
-"""class animal():
-    def __init__(self, nome, cor):
-        self.nome = nome
-        self.cor = cor
-
-    def comer(self):
-        print(f' O {self.nome} foi comer...')
- class Gato(Animal):
-    def __init__(self, nome, cor):
- super().__init__(nome, cor)
- def miar(self):
-        print( f' O {self.nome} foi miando...')"""
+    def aposentar(self):
+        self.aposentado = True
+        print("O triatleta foi aposentado.")
